@@ -8,10 +8,6 @@ hooks:
    - location: scripts/prep_node_app_location.sh
      timeout: 300
      runas: root
-  ApplicationStop:
-   - location: scripts/stop_node_app.sh
-     timeout: 300
-     runas: root
   ApplicationStart:
    - location: scripts/start_node_app.sh
      timeout: 300
