@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ec2-user/backend-app
-npm run start
+nohup node index.js &
