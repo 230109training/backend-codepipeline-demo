@@ -1,2 +1,6 @@
 #!/bin/bash
-pkill node
+pid=$(pgrep node)
+
+if [ -n "$pid" ]; then
+    kill $pid
+fi
