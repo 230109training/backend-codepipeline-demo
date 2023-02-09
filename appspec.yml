@@ -4,6 +4,10 @@ files:
  - source: /
    destination: /home/ec2-user/backend-app/
 hooks:
+  ApplicationStop:
+   - location: scripts/stop_node_app.sh
+     timeout: 300
+     runas: root
   BeforeInstall:
    - location: scripts/prep_node_app_location.sh
      timeout: 300
