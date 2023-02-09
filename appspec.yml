@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+ - source: /
+   destination: /home/ec2-user/backend-app/
+hooks:
+  BeforeInstall:
+   - location: scripts/prep_node_app_location.sh
+     timeout: 300
+     runas: root
+  ApplicationStop:
+   - location: scripts/stop_node_app.sh
+     timeout: 300
+     runas: root
+  ApplicationStart:
+   - location: scripts/start_node_app.sh
+     timeout: 300
+     runas: root
